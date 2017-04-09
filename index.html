@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		p, h2 {
+			margin: 0;
+			padding: 0;
+		}
+		.wrapper {
+			width: 800px;
+			border: 1px solid #00ff00;
+			margin: 0 auto;
+		}
+
+		.new_links {
+			width: 600px;
+			margin: 0 auto;
+		}
+		.new_links input, button{
+			display: inline-block;
+		}
+
+		.new_links p {
+			display: inline-block;
+		}
+
+		#item_description {
+
+		}
+
+		#item_link {
+
+		}
+
+		#boxes {
+			width: 600px;
+			border: 1px solid #000;
+			margin: 0 auto;
+		}
+		.box {
+			display: inline-block;
+			width: 400px;
+			border: 1px solid #0000ff;
+		}
+
+		.link_item {
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<div class='wrapper'>
+		<div class='new_links'>
+			<label for='item_description'>Description</label>
+			<input type='text' name='description' id='item_description'>
+
+			<label for='item_link'>Link URL</label>
+			<input type='text' name='link' id='item_link'>
+			<button id='button_add'>Add</button>
+		</div>
+		<div id='boxes'>
+		</div>
+	</div>
+</body>
+<script>
+	var links = [
+		['Typing', 
+			[
+				['Typing Sentences', 'http://www.freetypinggame.net/free-typing-test.asp'],
+				['Dvorak','https://powertyping.com/dvorak/dvorakL.html'],
+				['Program Typing','https://typing.io/']
+			]
+		],
+		['Stocks', 
+			[
+				['WSJ', 'http://www.wsj.com'],
+				['Google Finance','https://www.google.com/finance?q=tsla&ei=yX_pWMm6OMax2AbE2IPgCw'],
+				['TheStreet','https://www.thestreet.com/quote/TSLA.html']
+			]
+		],
+		['New',[]]
+		
+	];
+
+	function addLinks(e){
+		document.getElementById('item_description').value;
+		
+	}
+
+	function displayBoxes(){
+		var boxes_display = '';
+
+		for(var i=0; i<links.length; i++){
+		//create each box
+			boxes_display += "<div class='box'>"+"<h2>" +links[i][0]+ "</h2>";
+			for(var j=0; j<links[i][1].length; j++){
+			//create each link
+				boxes_display += "<a class='link_item' href='" + links[i][1][j][1]+ "' target='_blank'>"+links[i][1][j][0]+"</a>";
+			}
+			boxes_display += "</div>";
+		}
+		document.getElementById('boxes').innerHTML += boxes_display;
+	}
+	
+	document.getElementById('button_add').addEventListener('click', addLinks);
+	displayBoxes();
+
+</script>
+</html>

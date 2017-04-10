@@ -1,0 +1,44 @@
+p, h2 {
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	width: 800px;
+	border: 1px solid #00ff00;
+	margin: 0 auto;
+}
+
+.new_links {
+	width: 600px;
+	margin: 0 auto;
+}
+.new_links input, button{
+	display: inline-block;
+}
+
+.new_links p {
+	display: inline-block;
+}
+
+#item_description {
+
+}
+
+#item_link {
+
+}
+
+#boxes {
+	width: 600px;
+	border: 1px solid #000;
+	margin: 0 auto;
+}
+.box {
+	display: inline-block;
+	width: 400px;
+	border: 1px solid #0000ff;
+}
+
+.link_item {
+	display: block;
+}

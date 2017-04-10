@@ -8,6 +8,15 @@ p, h2 {
 	margin: 0 auto;
 }
 
+.hide_add {
+	visibility: hidden;
+}
+.button_save {
+	display: block;
+}
+.hide_edit {
+	display: none;
+}
 .new_links {
 	width: 600px;
 	margin: 0 auto;

@@ -6,7 +6,8 @@
 </head>
 <body>
 	<div class='wrapper'>
-		<div class='new_links'>
+
+		<div class='new_links hide_add' id='add_item'>
 			<label for='item_description'>Description</label>
 			<input type='text' name='description' id='item_description'>
 
@@ -14,9 +15,35 @@
 			<input type='text' name='link' id='item_link'>
 			<button id='button_add'>Add</button>
 		</div>
+
+<!-- 		<div class="box" id="5">
+			<button class="button_edit" onclick="editItems(5)">Edit</button>
+			<button class="button_launch" onclick="launchWindow(0)">Launch</button>
+			<h2>Typing</h2>
+			<a class="link_item" href="http://www.freetypinggame.net/free-typing-test.asp" target="_blank">Typing Sentences</a>
+
+			<input class='hide_edit' type='text' placeholder='Typing Sentences' name='0'>
+			<input class='hide_edit' type='text' placeholder='http://www.freetypinggame.net/free-typing-test.asp' name='0'>
+
+			<a class="link_item" href="https://powertyping.com/dvorak/dvorakL.html" target="_blank">Dvorak</a>
+			<input class='hide_edit' type='text' placeholder='Typing Sentences' name='1'>
+			<input class='hide_edit' type='text' placeholder='http://www.freetypinggame.net/free-typing-test.asp' name='1'>
+
+			<a class="link_item" href="https://typing.io/" target="_blank">Program Typing</a>
+			<input class='hide_edit' type='text' placeholder='Typing Sentences' name='2'>
+			<input class='hide_edit' type='text' placeholder='http://www.freetypinggame.net/free-typing-test.asp' name='2'>
+
+			<button class="button_launch" onclick="saveEdits(0)">Save</button>
+		</div> -->
+
 		<div id='boxes'>
+			
+
+<input class='hide_edit' type='text' placeholder='http://www.freetypinggame.net/free-typing-test.asp' name='1'>
 		</div>
+
 	</div>
+	<button onclick='hideAllInputs()'>HIDE</button>
 </body>
 <script src='scripts.js'></script>
 </html>

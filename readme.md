@@ -27,3 +27,5 @@ Flow
 [17-04-09]-> Closes all other edit boxes for only one edit at a time when hitting save.
 
 http://stackoverflow.com/questions/195951/change-an-elements-class-with-javascript
+
+[~] Save button updates the array.

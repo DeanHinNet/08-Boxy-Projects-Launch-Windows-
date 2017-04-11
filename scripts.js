@@ -26,6 +26,7 @@ var links = [
 	]
 ];
 
+//id_index = 0, links_index = 2, box_name_id = 1, item_link = 1, item_name = 0;
 function launchChrome(box_index){
 	var links_index = 2;
 	var link_address = 1;
@@ -101,13 +102,10 @@ function editItems(box_id){
 	for(var i=0; i<inputs.length; i++){
 		inputs[i].classList.toggle("hide_edit");
 	}
-	console.log(box.getElementsByClassName('button_save')[0].classList.toggle('hide_edit'));
+	box.getElementsByClassName('button_save')[0].classList.toggle('hide_edit');
 }
 
-function saveEdits(box_id){
-	//Save all items to array
-	hideAllInputs();
-}
+
 
 function displayBoxes(){
 	document.getElementById('boxes').innerHTML = "";
@@ -135,6 +133,28 @@ function displayBoxes(){
 	}
 	document.getElementById('boxes').innerHTML += boxes_display;
 }
-
+function saveEdits(box_id){
+	//Save all items to array
+	//Grab the changes
+	//Put the changes into the array
+	var id_index = 0;
+	var inputs = [];
+	var links_index = 2;
+	for(var i=0; i<links.length; i++){
+		if(links[i][id_index] == box_id){
+			inputs = document.getElementById(box_id).getElementsByTagName('input');
+			for(var j=0; j<inputs.length/2; j++){
+					// console.log(j);
+					// console.log(links[i][links_index][j][0]);
+					// console.log(inputs[j*2].value);
+				// links[i][links_index][j][1] = inputs[(j*2)+1];
+				links[i][links_index][j][0] = inputs[j*2].value;
+				links[i][links_index][j][1] = inputs[(j*2)+1].value;
+			}
+		}
+	}
+	hideAllInputs();
+	displayBoxes();
+}
 document.getElementById('button_add').addEventListener('click', addLinks);
 displayBoxes();
